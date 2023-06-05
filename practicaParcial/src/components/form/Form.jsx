@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "../card/Card";
 import styles from "./Form.module.css";
 
-const Form = () => {
+const Form = ({onSubmit}) => {
   const [artista, setArtista] = useState("");
   const [cancion, setCancion] = useState("");
   const [error, setError] = useState("");
@@ -21,18 +21,19 @@ const Form = () => {
     e.preventDefault();
 
     if (artista.trim().length < 3 || artista.trim().startsWith(" ")) {
-      setError("Por favor chequea que la información sea correcta");
+      setError("Por favor, ingresa un artista con un mínimo de tres caracteres");
       return;
     }
 
     if (cancion.trim().length < 6) {
-      setError("Por favor chequea que la información sea correcta");
+      setError("Por favor, ingresa una canción con un mínimo de seis caracteres");
       return;
     }
-    setShowCard(true);
+    onSubmit({ artista, cancion });
+    setArtista("");
+    setCancion("");
+    setError("");
   };
-
-
 
   return (
     <div className={styles.container}>
@@ -56,7 +57,7 @@ const Form = () => {
             onChange={handleInputChangeCancion}
           />
         </div>
-        <button type="submit">Enviar</button>
+        <button className={styles.enviar} type="submit">Enviar</button>
       </form>
       {error && <p className={styles.error}>{error}</p>}
 

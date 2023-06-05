@@ -1,9 +1,6 @@
 body {
   height: 100vh;
   background: -webkit-linear-gradient(30deg,#121212,#b3b3b3); /* Safari/Chrome */
-  padding: 50px;
+  padding: 20px;
+  margin: 10px;
 }
-
-
-
-

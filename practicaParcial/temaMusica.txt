@@ -1,0 +1,84 @@
+Aquí tienes el código que cumple con las consignas mencionadas. He creado un componente Formulario que tiene un tema de música y realiza las validaciones requeridas. Al hacer clic en el botón "Enviar", se renderiza el componente Card con la información ingresada en el formulario.
+
+jsx
+Copy code
+import React, { useState } from 'react';
+
+function Formulario() {
+  const [artista, setArtista] = useState('');
+  const [cancion, setCancion] = useState('');
+  const [error, setError] = useState('');
+
+  const handleChangeArtista = (e) => {
+    setArtista(e.target.value);
+  };
+
+  const handleChangeCancion = (e) => {
+    setCancion(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (artista.trim().length < 3 || artista.trim().startsWith(' ')) {
+      setError('Por favor chequea que la información sea correcta');
+      return;
+    }
+
+    if (cancion.trim().length < 6) {
+      setError('Por favor chequea que la información sea correcta');
+      return;
+    }
+
+    setError('');
+  };
+
+  return (
+    <div>
+      <h2>Formulario de Música</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="artista">Artista:</label>
+          <input
+            type="text"
+            id="artista"
+            value={artista}
+            onChange={handleChangeArtista}
+          />
+        </div>
+        <div>
+          <label htmlFor="cancion">Canción:</label>
+          <input
+            type="text"
+            id="cancion"
+            value={cancion}
+            onChange={handleChangeCancion}
+          />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+
+      {error && <p>{error}</p>}
+      {!error && (artista || cancion) && (
+        <Card artista={artista} cancion={cancion} />
+      )}
+    </div>
+  );
+}
+
+function Card({ artista, cancion }) {
+  return (
+    <div>
+      <h2>Card de Música</h2>
+      <p>Artista: {artista}</p>
+      <p>Canción: {cancion}</p>
+    </div>
+  );
+}
+
+export default Formulario;
+En este código, el componente Formulario muestra un formulario con dos inputs de texto para ingresar el nombre del artista y el título de la canción. Al hacer clic en el botón "Enviar", se realizan las validaciones y se muestra un mensaje de error si alguna de las validaciones falla. Si la validación es exitosa, se renderiza el componente Card con la información ingresada.
+
+El componente Card simplemente muestra los valores del artista y la canción en un formato de tarjeta.
+
+Espero que este código te sea útil como punto de partida para crear componentes que se ajusten a tus necesidades. Recuerda que puedes personalizar el estilo y la estructura de los componentes según tus preferencias.

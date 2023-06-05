@@ -5,17 +5,13 @@ box-shadow: 0 0 10px #0a0a0a;
 color: #222b26;
 padding: 2px;
 list-style: none;
-margin-top: 15px;
+margin: 20px;
 display: flex;
-flex-wrap: wrap;
+display: inline-block;
 }
 
 .valoresInput{
     list-style: none;
-}
-
-label{
-    margin-top: 10px;
 }
 
 .lista{
@@ -25,13 +21,4 @@ label{
     box-shadow: 0 0 10px #0a0a0a;
     display: inline-block;
     margin: 15px
-}
-
-.eliminar:hover{
-    background: -webkit-linear-gradient(85deg,  rgb(126, 3, 3),#c0c2c1); /* Safari/Chrome */
-    border-radius: 10px;
-}
-
-.FontAwesomeIcon:hover{
-    color: white;
 }
