@@ -1,0 +1,189 @@
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.favButton{
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgb(0, 0, 0.25), 0 0 2px rgb(0, 0, 1);
+}
+
+h1{
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+nav{
+  display: flex;
+  justify-content:space-between;
+  padding: 1rem 2.5rem;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
+
+.divNav{
+  display: flex;
+  gap: 2rem;
+  margin-right: 8rem;
+}
+
+nav button{
+  background-color: rgb(32, 37, 61);
+  width: 30px;
+  height: 30px;
+  padding: 0 5px 6px 0;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+a:hover{
+  color:#3b3f77;
+} 
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2.5rem;
+  height: 40px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.8);
+}
+
+.logoDH{
+  max-width: 200px;
+}
+
+.divRedes{
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.redes{
+  max-height: 25px;
+}
+
+.contact{
+  padding: 0 3rem 20rem 3rem;
+}
+
+.contact h2{
+  margin-top: 0;
+  padding-top: 3rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+form input{
+  margin-bottom: 10px;
+}
+
+.contact p{
+  margin-bottom: 3rem;
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding:1.5rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgb(0, 0, 0.25), 0 0 5px rgb(0, 0, 1);
+  background-color: white;
+  color: black;
+  transition: transform 3s;
+  width: 20%;
+  margin-bottom: 3rem;
+}
+
+.card:hover{
+  transform: scale(1.1)
+}
+
+.card-grid{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height: 40%;
+  width: 88%;
+}
+
+.card img {
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgb(0, 0, 0.25), 0 0 5px rgb(0, 0, 1);
+}
+
+.card h2{
+  text-align: center;
+}
+
+table {
+border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.dark{
+  background-color: #12121296;
+  color: white;
+}
+
+.dark > a {
+  color: white;
+}
+
+.divNav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.icono span{
+  color: red;
+}
+
+.favs{
+  padding-bottom: 20rem; ;
+}
+
+.detail{
+  padding-bottom: 25rem; ;
+}
